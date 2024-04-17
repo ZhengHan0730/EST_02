@@ -1,16 +1,20 @@
 package zest;
 
+import java.math.BigDecimal;
+
 public class ClimbingStairs {
-    public long climbStairs(int n) {
+
+    @CheckContracts
+    public BigDecimal climbStairs(int n) {
         if (n <= 2) {
-            return n;
+            return new BigDecimal(n);
         }
-        long oneStepBefore = 2;
-        long twoStepsBefore = 1;
-        long allWays = 0;
+        BigDecimal oneStepBefore = new BigDecimal(2);
+        BigDecimal twoStepsBefore = new BigDecimal(1);
+        BigDecimal allWays = new BigDecimal(0);
 
         for (int i = 2; i < n; i++) {
-            allWays = oneStepBefore + twoStepsBefore;
+            allWays = oneStepBefore.add(twoStepsBefore);
             twoStepsBefore = oneStepBefore;
             oneStepBefore = allWays;
         }
