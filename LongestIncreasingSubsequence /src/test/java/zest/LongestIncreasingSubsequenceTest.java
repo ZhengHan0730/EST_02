@@ -1,6 +1,0 @@
-package zest;
-
-class LongestIncreasingSubsequenceTest {
-
- 
-}
