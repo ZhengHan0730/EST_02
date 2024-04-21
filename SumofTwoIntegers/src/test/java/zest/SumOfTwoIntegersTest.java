@@ -28,10 +28,10 @@ class SumOfTwoIntegersTest {
     @Test
     public void testBoundaryConditions() {
         int result = calculator.getSum(Integer.MAX_VALUE - 1, 1);
-        assertEquals(Integer.MAX_VALUE, result);  // 应该等于最大值
+        assertEquals(Integer.MAX_VALUE, result);
 
         result = calculator.getSum(Integer.MIN_VALUE + 1, -1);
-        assertEquals(Integer.MIN_VALUE, result);  // 应该等于最小值
+        assertEquals(Integer.MIN_VALUE, result);  
     }
 
     /**
