@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CourseSchedule {
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
 
+    @CheckContracts
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
 
         // Create a graph from prerequisites
         List<List<Integer>> graph = new ArrayList<>();
@@ -28,8 +29,10 @@ public class CourseSchedule {
     }
 
     private boolean hasCycle(List<List<Integer>> graph, int current, boolean[] visited, boolean[] onPath) {
-        if (onPath[current]) return true; // Cycle detected
-        if (visited[current]) return false; // Already visited
+        if (onPath[current])
+            return true; // Cycle detected
+        if (visited[current])
+            return false; // Already visited
 
         visited[current] = true;
         onPath[current] = true;
