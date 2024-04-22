@@ -10,49 +10,57 @@
 
 <span class="fc" id="L11">        int tortoise = nums[0];</span>
 <span class="fc" id="L12">        int hare = nums[0];</span>
+<span class="fc" id="L13">        int[] original = nums.clone();</span>
 
         // Phase 1: Finding the intersection point of the two runners.
         do {
-<span class="fc" id="L16">            tortoise = nums[tortoise];</span>
-<span class="fc" id="L17">            hare = nums[nums[hare]];</span>
-<span class="fc bfc" id="L18" title="All 2 branches covered.">        } while (tortoise != hare);</span>
+<span class="fc" id="L17">            tortoise = nums[tortoise];</span>
+<span class="fc" id="L18">            hare = nums[nums[hare]];</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">        } while (tortoise != hare);</span>
 
         // Phase 2: Finding the &quot;entrance&quot; to the cycle.
-<span class="fc" id="L21">        tortoise = nums[0];</span>
-<span class="fc bfc" id="L22" title="All 2 branches covered.">        while (tortoise != hare) {</span>
-<span class="fc" id="L23">            tortoise = nums[tortoise];</span>
-<span class="fc" id="L24">            hare = nums[hare];</span>
+<span class="fc" id="L22">        tortoise = nums[0];</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        while (tortoise != hare) {</span>
+<span class="fc" id="L24">            tortoise = nums[tortoise];</span>
+<span class="fc" id="L25">            hare = nums[hare];</span>
         }
 
         // Post-conditions
-<span class="pc bpc" id="L28" title="1 of 2 branches missed.">        assert isElementOf(nums, hare) : &quot;The found duplicate is not a valid element in the array&quot;;</span>
+<span class="pc bpc" id="L29" title="1 of 2 branches missed.">        assert isElementOf(nums, hare) : &quot;The found duplicate is not a valid element in the array&quot;;</span>
         //invariant
-<span class="pc bpc" id="L30" title="1 of 2 branches missed.">        assert isUnchanged(nums) : &quot;The input array has been modified&quot;;</span>
+<span class="pc bpc" id="L31" title="1 of 2 branches missed.">        assert isUnchanged(original, nums) : &quot;The input array has been modified&quot;;</span>
 
-<span class="fc" id="L32">        return hare;</span>
+<span class="fc" id="L33">        return hare;</span>
     }
 
     protected static boolean isElementOf(int[] arr, int val) {
-<span class="fc bfc" id="L36" title="All 2 branches covered.">        for (int num : arr) {</span>
-<span class="fc bfc" id="L37" title="All 2 branches covered.">            if (num == val) {</span>
-<span class="fc" id="L38">                return true;</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        for (int num : arr) {</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">            if (num == val) {</span>
+<span class="fc" id="L39">                return true;</span>
             }
         }
-<span class="fc" id="L41">        return false;</span>
+<span class="fc" id="L42">        return false;</span>
     }
 
     protected static boolean isWithinRange(int[] arr) {
-<span class="fc bfc" id="L45" title="All 2 branches covered.">        for (int num : arr) {</span>
-<span class="fc bfc" id="L46" title="All 4 branches covered.">            if (num &lt; 1 || num &gt; arr.length - 1) {</span>
-<span class="fc" id="L47">                return false;</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        for (int num : arr) {</span>
+<span class="fc bfc" id="L47" title="All 4 branches covered.">            if (num &lt; 1 || num &gt; arr.length - 1) {</span>
+<span class="fc" id="L48">                return false;</span>
             }
         }
-<span class="fc" id="L50">        return true;</span>
+<span class="fc" id="L51">        return true;</span>
     }
 
-    private static boolean isUnchanged(int[] original) {
-        // Implement logic to check if array remains unchanged
-<span class="fc" id="L55">        return true; // This is just a placeholder; actual implementation needed</span>
+    private static boolean isUnchanged(int[] original, int[] current) {
+<span class="pc bpc" id="L55" title="1 of 2 branches missed.">        if (original.length != current.length) {</span>
+<span class="nc" id="L56">            return false;</span>
+        }
+<span class="fc bfc" id="L58" title="All 2 branches covered.">        for (int i = 0; i &lt; original.length; i++) {</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">            if (original[i] != current[i]) {</span>
+<span class="nc" id="L60">                return false;</span>
+            }
+        }
+<span class="fc" id="L63">        return true;</span>
     }
 }
 

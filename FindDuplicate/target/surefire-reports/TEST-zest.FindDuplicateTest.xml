@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="zest.FindDuplicateTest" time="0.05" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="zest.FindDuplicateTest" time="0.039" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="GBK"/>
-    <property name="java.class.path" value="D:\360MoveData\Users\Thunderobot\Desktop\assignment02\FindDuplicate\target\test-classes;D:\360MoveData\Users\Thunderobot\Desktop\assignment02\FindDuplicate\target\classes;C:\Users\Thunderobot\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Thunderobot\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Thunderobot\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Thunderobot\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Thunderobot\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Thunderobot\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik\1.5.1\jqwik-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-api\1.5.1\jqwik-api-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-web\1.5.1\jqwik-web-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-time\1.5.1\jqwik-time-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-engine\1.5.1\jqwik-engine-1.5.1.jar;"/>
+    <property name="java.class.path" value="D:\360MoveData\Users\Thunderobot\Desktop\FindDuplicate\target\test-classes;D:\360MoveData\Users\Thunderobot\Desktop\FindDuplicate\target\classes;C:\Users\Thunderobot\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Thunderobot\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Thunderobot\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Thunderobot\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Thunderobot\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Thunderobot\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik\1.5.1\jqwik-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-api\1.5.1\jqwik-api-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-web\1.5.1\jqwik-web-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-time\1.5.1\jqwik-time-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-engine\1.5.1\jqwik-engine-1.5.1.jar;"/>
     <property name="java.vm.vendor" value="Amazon.com Inc."/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -17,9 +17,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="D:\360MoveData\Users\Thunderobot\Desktop\EST\JDK\bin"/>
-    <property name="sun.java.command" value="C:\Users\THUNDE~1\AppData\Local\Temp\surefire6478491319448635469\surefirebooter4269641945971595078.jar C:\Users\Thunderobot\AppData\Local\Temp\surefire6478491319448635469 2024-04-17T16-57-04_539-jvmRun1 surefire11241582463518601700tmp surefire_013189380160528281363tmp"/>
+    <property name="sun.java.command" value="C:\Users\THUNDE~1\AppData\Local\Temp\surefire1631549134115394917\surefirebooter6969754839016996417.jar C:\Users\Thunderobot\AppData\Local\Temp\surefire1631549134115394917 2024-04-22T12-28-17_034-jvmRun1 surefire12689724632075614080tmp surefire_0879150020775263914tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="D:\360MoveData\Users\Thunderobot\Desktop\assignment02\FindDuplicate\target\test-classes;D:\360MoveData\Users\Thunderobot\Desktop\assignment02\FindDuplicate\target\classes;C:\Users\Thunderobot\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Thunderobot\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Thunderobot\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Thunderobot\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Thunderobot\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Thunderobot\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik\1.5.1\jqwik-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-api\1.5.1\jqwik-api-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-web\1.5.1\jqwik-web-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-time\1.5.1\jqwik-time-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-engine\1.5.1\jqwik-engine-1.5.1.jar;"/>
+    <property name="surefire.test.class.path" value="D:\360MoveData\Users\Thunderobot\Desktop\FindDuplicate\target\test-classes;D:\360MoveData\Users\Thunderobot\Desktop\FindDuplicate\target\classes;C:\Users\Thunderobot\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Thunderobot\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Thunderobot\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Thunderobot\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Thunderobot\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Thunderobot\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik\1.5.1\jqwik-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-api\1.5.1\jqwik-api-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-web\1.5.1\jqwik-web-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-time\1.5.1\jqwik-time-1.5.1.jar;C:\Users\Thunderobot\.m2\repository\net\jqwik\jqwik-engine\1.5.1\jqwik-engine-1.5.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Thunderobot"/>
     <property name="user.language" value="zh"/>
@@ -27,13 +27,13 @@
     <property name="java.version.date" value="2024-01-16"/>
     <property name="java.home" value="D:\360MoveData\Users\Thunderobot\Desktop\EST\JDK"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="D:\360MoveData\Users\Thunderobot\Desktop\assignment02\FindDuplicate"/>
+    <property name="basedir" value="D:\360MoveData\Users\Thunderobot\Desktop\FindDuplicate"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\THUNDE~1\AppData\Local\Temp\surefire6478491319448635469\surefirebooter4269641945971595078.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\THUNDE~1\AppData\Local\Temp\surefire1631549134115394917\surefirebooter6969754839016996417.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.22+7-LTS"/>
@@ -49,7 +49,7 @@
     <property name="java.io.tmpdir" value="C:\Users\THUNDE~1\AppData\Local\Temp\"/>
     <property name="idea.version" value="2023.3.4"/>
     <property name="java.version" value="11.0.22"/>
-    <property name="user.dir" value="D:\360MoveData\Users\Thunderobot\Desktop\assignment02\FindDuplicate"/>
+    <property name="user.dir" value="D:\360MoveData\Users\Thunderobot\Desktop\FindDuplicate"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
@@ -62,11 +62,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testArrayElementRange" classname="zest.FindDuplicateTest" time="0.036"/>
+  <testcase name="testArrayElementRange" classname="zest.FindDuplicateTest" time="0.025"/>
   <testcase name="testIsElementOfWithNonExistingElement" classname="zest.FindDuplicateTest" time="0"/>
   <testcase name="testElementAboveRange" classname="zest.FindDuplicateTest" time="0"/>
   <testcase name="testWithNullArray" classname="zest.FindDuplicateTest" time="0.001"/>
-  <testcase name="testArrayTooShort" classname="zest.FindDuplicateTest" time="0.001"/>
-  <testcase name="testElementBelowRange" classname="zest.FindDuplicateTest" time="0.001"/>
-  <testcase name="testNormalOperation" classname="zest.FindDuplicateTest" time="0.002"/>
+  <testcase name="testArrayTooShort" classname="zest.FindDuplicateTest" time="0"/>
+  <testcase name="testElementBelowRange" classname="zest.FindDuplicateTest" time="0"/>
+  <testcase name="testNormalOperation" classname="zest.FindDuplicateTest" time="0.001"/>
 </testsuite>
