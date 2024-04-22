@@ -2,7 +2,9 @@
 
 ## Code Coverage
 
-![Sum of Two Integers](/Users/zhenghan/Downloads/assignment02/SumofTwoIntegers/assert/cc_SumofTwoIntegers.png)
+![Sum of Two Integers](assert/code coverage.png)
+
+
 
 ## Designing Contracts
 
@@ -51,11 +53,19 @@ Set the value to 0 if the value obtained is negative.
 
 ## Property-Based Testing
 
+### Key Property
+
+1. Valid range of inputs: Make sure that both m and n are in the range of 1 to 100.
+2. Correct output: the number of paths returned should be positive.
+3. Unique Path Calculation: Given m rows and n columns, calculate the number of paths as expected.
+4. Boundary conditions: Include inputs for minimum and maximum values.
+5. Single Row or Single Column: Tests the number of paths if there is only one row or column.
+
+###  100% tries (101/1000 times) of jqwik tests passed, therefore the test is considered successful
+
+![Sum of Two Integers](assert/run.png)
 
 
-###  100% tries (1000 times) of jqwik tests passed, therefore the test is considered successful
-
-![Sum of Two Integers](/Users/zhenghan/Downloads/assignment02/SumofTwoIntegers/assert/run_SumofTwoIntegers.png)
 
 ## Note
 

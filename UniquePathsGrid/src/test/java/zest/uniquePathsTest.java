@@ -1,16 +1,17 @@
 package zest;
 import org.junit.jupiter.api.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import net.jqwik.api.*;
+import net.jqwik.api.constraints.IntRange;
 
 class uniquePathsTest {
     private final uniquePaths uniquePaths = new uniquePaths();
 
-    // Test for normal operation when preconditions are met
     @Test
     public void testNormalOperation() {
-
-        int result = uniquePaths.uniquePaths(3, 3);
+        long result = uniquePaths.uniquePaths(3, 3);
         assertEquals(6, result);
 
         result = uniquePaths.uniquePaths(2, 2);
@@ -20,7 +21,6 @@ class uniquePathsTest {
         assertEquals(28, result);
     }
 
-    // Testing exception handling when preconditions are violated
     @Test
     public void testPreConditionViolationM() {
         assertThrows(IllegalArgumentException.class, () -> {
@@ -35,29 +35,71 @@ class uniquePathsTest {
         });
     }
 
-    // Ensure that postconditions are maintained after function execution
     @Test
     public void testPostConditions() {
-        int result = uniquePaths.uniquePaths(1, 1);
+        long result = uniquePaths.uniquePaths(1, 1);
         assertEquals(1, result);
 
         result = uniquePaths.uniquePaths(100, 100);
         assertTrue(result >=0);
     }
 
-    // Ensure that invariants remain after a state change
     @Test
     public void testInvariants() {
-
-        int result = uniquePaths.uniquePaths(3, 3);
+        long result = uniquePaths.uniquePaths(3, 3);
         assertTrue(result >= 0);
 
         result = uniquePaths.uniquePaths(100, 100);
         assertTrue(result >= 0);
-        
+
         result = uniquePaths.uniquePaths(7, 3);
         assertEquals(28, result);
     }
 
- 
+    @Test
+    public void testBoundaryConditions() {
+        assertEquals(1, uniquePaths.uniquePaths(1, 1));
+
+        assertTrue(uniquePaths.uniquePaths(100, 100) >=0);
+
+        assertEquals(1, uniquePaths.uniquePaths(1, 100));
+
+        assertEquals(1, uniquePaths.uniquePaths(100, 1));
+    }
+
+    @Property
+    public void validGridSize(@ForAll @IntRange(min = 1, max = 100) int m,
+                              @ForAll @IntRange(min = 1, max = 100) int n) {
+
+        assertDoesNotThrow(() -> {
+            long result = uniquePaths.uniquePaths(m, n);
+            assertTrue(result >=0);
+        });
+    }
+
+    @Property
+    public void invalidGridSize(@ForAll @IntRange(min = -100, max = 0) int invalid) {
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            uniquePaths.uniquePaths(invalid, 1); // 非法的行数
+        });
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            uniquePaths.uniquePaths(1, invalid); // 非法的列数
+        });
+    }
+
+    @Property
+    public void overflowCheck(@ForAll @IntRange(min = 1, max = 100) int m,
+                              @ForAll @IntRange(min = 1, max = 100) int n) {
+        assertDoesNotThrow(() -> {
+            uniquePaths.uniquePaths(m, n);
+        });
+    }
+
+
+
+
+
+
 }

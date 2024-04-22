@@ -1,48 +1,48 @@
 package zest;
 
 public class uniquePaths {
-    public int uniquePaths(int m, int n) {
-        // Preconditions: Check if grid dimensions are within acceptable range
-        if (m < 1 || m > 100) {
-            throw new IllegalArgumentException("`1 <= m <= 100`");
-        }
-        if (n < 1 || n > 100) {
-            throw new IllegalArgumentException("`1 <= n <= 100`");
+
+    public long uniquePaths(int m, int n) {
+        // check Preconditions
+        if (m < 1 || m > 100 || n < 1 || n > 100) {
+            throw new IllegalArgumentException("check preconditions");
         }
 
-        // Initialize the dynamic programming (DP) table with default values
-        int[][] dp = new int[m][n];
 
-        // Invariant: Grid boundaries
-        // Initialize the first row and column to represent paths along the edges
+        long[][] dp = new long[m][n];
+
+
         for (int i = 0; i < m; i++) {
-            dp[i][0] = 1; // Only one way to reach any cell in the first column
+            dp[i][0] = 1;
         }
         for (int j = 0; j < n; j++) {
-            dp[0][j] = 1; // Only one way to reach any cell in the first row
+            dp[0][j] = 1;
         }
 
-        // Invariant: Uniqueness of paths
-        // Calculate the number of unique paths for the rest of the grid
+        // Calculates the number of paths and prevents negative numbers and overflows
         for (int i = 1; i < m; i++) {
             for (int j = 1; j < n; j++) {
-                dp[i][j] = dp[i - 1][j] + dp[i][j - 1]; // Sum of paths from top and left
+                long sum = dp[i - 1][j] + dp[i][j - 1];
 
-                // Ensure that the result doesn't go negative
-                if (dp[i][j] < 0) {
-                    dp[i][j] = 0; // This shouldn't occur with valid inputs, just a safeguard
+                //
+                if (sum < 0 || sum > Long.MAX_VALUE) {
+                    dp[i][j] = 0; // If overflow or negative, set it to 0
+                } else {
+                    dp[i][j] = sum;
                 }
             }
         }
 
-        // Postconditions: Check that the final result is valid
-        int result = dp[m - 1][n - 1]; // Number of unique paths to reach the bottom-right corner
+        long result = dp[m - 1][n - 1];
 
+        // check Postconditions
         if (result < 0) {
-            result = 0; // If somehow negative, correct it
+            result = 0;
         }
 
-        return result; // Return the computed number of unique paths
+        return result;
     }
+
+
 
 }
